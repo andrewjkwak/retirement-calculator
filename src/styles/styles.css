@@ -1,0 +1,61 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html {
+    font-size: 16px;
+    font-family: -apple-system, BlinkMacSystemFont, "avenir next", avenir,
+    "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial,
+    sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+label {
+    font-weight: bold;
+    padding: 5px 0;
+}
+
+select {
+    margin: 0;
+    -webkit-appearance: none;
+    box-sizing: border-box;
+    padding: 0.4rem 0.5rem;
+    font-size: 0.9rem;
+    border: 2px solid gray;
+    border-radius: 5px;
+    height: auto;
+    margin-top: 10px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 125.304 125.304"><path d="M62.652 103.895L0 21.41h125.304" fill="%23343334"/></svg>');
+    background-repeat: no-repeat;
+    background-size: 0.5rem;
+    background-position: center right 0.5rem;
+  }
+
+input[type="number"],
+input[type="text"] {
+    padding: 0.4rem 0.5rem;
+    font-size: 0.9rem;
+    border: 2px solid gray;
+    color: black;
+    border-radius: 5px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+button {
+    padding: 0.3rem 0.5rem;
+    background-color: white;
+    box-shadow: none;
+    border: 2px solid gray;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+}
