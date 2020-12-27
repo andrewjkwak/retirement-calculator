@@ -4,7 +4,6 @@ export const FormContainer = styled.form`
   display: flex;
   flex-direction: column;
   max-width: 300px;
-  border: 1px solid black;
   padding: 10px;
 `;
 
@@ -16,5 +15,5 @@ export const PlanContainer = styled.div`
 export const StyledError = styled.p`
   margin: 5px 10px;
   color: maroon;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
 `;

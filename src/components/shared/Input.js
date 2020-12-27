@@ -6,9 +6,7 @@ import { StyledError } from "../../styles/FormStyles";
 const Input = ({ label, error, ...props }) => {
   return (
     <>
-      <label
-        htmlFor={ props.id }
-      >
+      <label htmlFor={ props.id }>
         { label}
       </label>
       <input { ...props } />

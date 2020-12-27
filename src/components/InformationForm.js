@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import { Formik, useFormik } from "formik";
-import { formInitialValue, BasicInfoConstant, RETIREMENT_PLAN, FormConstant } from "../constant/FormConstant";
+import { formInitialValue, BasicInfoConstant, FormConstant } from "../constant/FormConstant";
 import { FormContainer } from "../styles/FormStyles";
 import { formValidate } from "../utils/FormValidate";
 
 import FormGroup from "./shared/FormGroup";
-import AddIcon from "./shared/AddIcon";
+import PlanSelect from "./PlanSelect";
 
 const InformationForm = () => {
 
@@ -29,18 +29,14 @@ const InformationForm = () => {
           values={ BasicInfoConstant }
           formik={ formik }
         />
-        <select name="plan" value={ formik.values.plan } onChange={ formik.handleChange }>
-          <option value="">Select a plan</option>
-          <option value={RETIREMENT_PLAN["401K"]}>401(k)</option>
-          <option value={RETIREMENT_PLAN["ROTH_IRA"]}>Roth IRA</option>
-          <option value={RETIREMENT_PLAN["HSA"]}>HSA</option>
-        </select>
+        <PlanSelect formik={ formik } />
         { formik.values.plan &&
           <FormGroup
             values={ FormConstant }
             formik={ formik }
           />
         }
+        <button type="submit">Calculate</button>
       </FormContainer>
     </Formik>
 

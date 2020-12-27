@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -9,16 +11,23 @@
 }
 
 html {
-    font-size: 16px;
-    font-family: -apple-system, BlinkMacSystemFont, "avenir next", avenir,
-    "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial,
-    sans-serif;
+    font-size: 10px;
+    font-family: 'Lato', sans-serif;
     margin: 0;
     padding: 0;
 }
 
+h1 {
+    font-size: 4rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
 label {
     font-weight: bold;
+    font-size: 1.4rem;
     padding: 5px 0;
 }
 
@@ -27,11 +36,10 @@ select {
     -webkit-appearance: none;
     box-sizing: border-box;
     padding: 0.4rem 0.5rem;
-    font-size: 0.9rem;
+    font-size: 1.4rem;
     border: 2px solid gray;
     border-radius: 5px;
     height: auto;
-    margin-top: 10px;
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 125.304 125.304"><path d="M62.652 103.895L0 21.41h125.304" fill="%23343334"/></svg>');
     background-repeat: no-repeat;
     background-size: 0.5rem;
@@ -41,7 +49,7 @@ select {
 input[type="number"],
 input[type="text"] {
     padding: 0.4rem 0.5rem;
-    font-size: 0.9rem;
+    font-size: 1.4rem;
     border: 2px solid gray;
     color: black;
     border-radius: 5px;
