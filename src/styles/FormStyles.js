@@ -5,6 +5,7 @@ export const FormContainer = styled.form`
   flex-direction: column;
   max-width: 300px;
   padding: 10px;
+  margin-top: 2rem;
 `;
 
 export const PlanContainer = styled.div`

@@ -17,6 +17,8 @@ export const formValidate = values => {
   // Salary error-checking
   if (isNaN(values.salary)) {
     errors.salary = "Salary must be a valid number.";
+  } else if (Number(values.salary) < 0) {
+    errors.salary = "Salary cannot be less than 0.";
   }
   // Current Account Value error-checking
   if (isNaN(values.currentAccValue)) {
@@ -38,7 +40,7 @@ export const formValidate = values => {
   }
   // Annual Returns error-checking
   if (values.annualReturns === "") {
-    errors.annualReturns = "Annual Returns should be a valid number.";
+    errors.annualReturns = "Annual Returns must be a valid number.";
   }
   return errors;
 };

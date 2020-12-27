@@ -1,15 +1,15 @@
 import React from "react";
 import TextGroup from "./shared/TextGroup";
-import { HOW_MUCH, HOW_THIS_WORKS, WHICH_PLAN } from "../constant/TextConstant";
+import { DisplayContainer } from "../styles/MainStyles";
+import { HOW_MUCH, HOW_IT_WORKS, WHICH_PLAN } from "../constant/TextConstant";
 
 const InformationDisplay = () => {
   return (
-    <div>
-      <h1>Retirement Calculator</h1>
-      <TextGroup text={ HOW_THIS_WORKS} />
+    <DisplayContainer>
+      <TextGroup text={ HOW_IT_WORKS } />
       <TextGroup text={ HOW_MUCH } />
       <TextGroup text={ WHICH_PLAN } />
-    </div>
+    </DisplayContainer>
   );
 };
 

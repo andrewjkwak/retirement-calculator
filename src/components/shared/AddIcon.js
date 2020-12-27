@@ -1,9 +1,9 @@
 import React from "react";
-import { faPlus } from "@fortawesome/free-solid-svg-icons";
+import { faQuestionCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const AddIcon = () => (
-  <FontAwesomeIcon icon={faPlus} />
+  <FontAwesomeIcon icon={ faQuestionCircle } size="xs" />
 );
 
 export default AddIcon;

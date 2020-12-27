@@ -1,19 +1,24 @@
 import React from "react";
-import { AsideContainer, MainContainer, ContentContainer } from "../styles/MainStyles";
-import InformationDisplay from "./InformationDisplay";
+import { AppContainer, HeaderContainer, AsideContainer, MainContainer, ContentContainer } from "../styles/MainStyles";
 
-// Component imports
+import Header from "./Header";
+import InformationDisplay from "./InformationDisplay";
 import InformationForm from "./InformationForm";
 
 const RetirementCalculator = () => (
-  <MainContainer>
-    <AsideContainer>
-      <InformationForm />
-    </AsideContainer>
-    <ContentContainer>
-      <InformationDisplay />
-    </ContentContainer>
-  </MainContainer>
+  <AppContainer>
+    <HeaderContainer>
+      <Header />
+    </HeaderContainer>
+    <MainContainer>
+      <AsideContainer>
+        <InformationForm />
+      </AsideContainer>
+      <ContentContainer>
+        <InformationDisplay />
+      </ContentContainer>
+    </MainContainer>
+  </AppContainer>
 )
 
 export default RetirementCalculator;

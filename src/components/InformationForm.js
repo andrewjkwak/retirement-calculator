@@ -36,7 +36,7 @@ const InformationForm = () => {
             formik={ formik }
           />
         }
-        <button type="submit">Calculate</button>
+        <button type="submit" disabled={!(formik.isValid && formik.dirty)}>Calculate</button>
       </FormContainer>
     </Formik>
 

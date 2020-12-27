@@ -1,8 +1,18 @@
 import styled from "styled-components";
 
+export const AppContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #fffdfa;
+`;
+
 export const MainContainer = styled.div`
   display: flex;
-  min-height: 100vh;
+`;
+
+export const HeaderContainer = styled.header`
+  padding: 1rem;
 `;
 
 export const AsideContainer = styled.aside`
@@ -11,7 +21,12 @@ export const AsideContainer = styled.aside`
 
 export const ContentContainer = styled.main`
   flex: 1 0 0;
-  background-color: #fffdfa;
+`;
+
+export const DisplayContainer = styled.div`
+  h1 {
+    text-align: center;
+  }
 `;
 
 export const TextGroupContainer = styled.div`
