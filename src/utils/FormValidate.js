@@ -39,8 +39,8 @@ export const formValidate = values => {
     errors.annualContribution = "Annual Contribution + Catch Up Limit is $26000";
   }
   // Annual Returns error-checking
-  if (values.annualReturns === "") {
-    errors.annualReturns = "Annual Returns must be a valid number.";
+  if (values.annualReturnRate === "") {
+    errors.annualReturnRate = "Annual Returns must be a valid number.";
   }
   return errors;
 };
