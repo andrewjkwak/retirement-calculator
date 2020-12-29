@@ -26,3 +26,8 @@ export const WHICH_PLAN = {
     }
   ]
 };
+
+export const UNDERSTANDING_GRAPH = {
+  title: `How To Read This Graph`,
+  content: `The graph below displays a breakdown of your retirement account. You can see a breakdown of how every part of your account grew over time. Each value per year is the total accumulation, so the final year will display the accumulation of all previous years before it.`
+};

@@ -55,3 +55,15 @@ export const SubContentTitle = styled.h4`
   font-size: 2rem;
   margin-bottom: 1rem;
 `;
+
+export const BreakdownContainer = styled.main`
+  flex: 1 0 0;
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+`;
+
+export const BarChartContainer = styled.div`
+  width: 100%;
+  height: 500px;
+`;

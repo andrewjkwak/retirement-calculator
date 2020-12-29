@@ -7,22 +7,16 @@ import { formValidate } from "../utils/FormValidate";
 import FormGroup from "./shared/FormGroup";
 import PlanSelect from "./PlanSelect";
 
-const InformationForm = () => {
+const InformationForm = ({ handleSubmit }) => {
 
   const formik = useFormik({
     initialValues: formInitialValue,
     validate: formValidate,
-    onSubmit: values => {
-      console.log(values)
-    },
+    onSubmit: handleSubmit,
   });
 
   return (
-    <Formik 
-      initialValues={formInitialValue}
-      validate={formValidate}
-      onSubmit={values => { console.log(values)}}
-    >
+    <Formik>
       <FormContainer onSubmit={ formik.handleSubmit }>
         <FormGroup
           title={ "Basic Information" }
