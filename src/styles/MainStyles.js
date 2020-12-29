@@ -63,7 +63,7 @@ export const BreakdownContainer = styled.main`
   margin: 0 auto;
 `;
 
-export const BarChartContainer = styled.div`
+export const FullChartContainer = styled.div`
   width: 100%;
   height: 500px;
 `;

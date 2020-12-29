@@ -1,13 +1,13 @@
 import React from "react";
 import { BarChart } from "recharts";
 import { useChartDimensions } from "../../hooks/useChartDimensions";
-import { BarChartContainer } from "../../styles/MainStyles";
+import { FullChartContainer } from "../../styles/MainStyles";
 
 const BarChartGraph = ({ chartData, children }) => {
   const [ref, dimensions] = useChartDimensions();
   console.log({ chartData, dimensions });
   return (
-    <BarChartContainer ref={ ref }>
+    <FullChartContainer ref={ ref }>
       <BarChart
         width={ dimensions.width }
         height={ dimensions.height }
@@ -21,7 +21,7 @@ const BarChartGraph = ({ chartData, children }) => {
       >
         { children }
       </BarChart>
-    </BarChartContainer>
+    </FullChartContainer>
   );
 };
 
