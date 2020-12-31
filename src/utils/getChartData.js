@@ -1,5 +1,11 @@
 const YEAR = new Date().getFullYear();
 
+export const usdFormat = new Intl.NumberFormat('en', {
+  style: 'currency',
+  currency: 'USD',
+  currencySign: 'accounting',
+});
+
 /**
  * @year - the year associated with the values
  * @contribution - how much the user contributed, alone
@@ -59,6 +65,27 @@ export const getChartData = userData => {
   }
   return chartData;
 };
+
+export const getMilestones = chartData => {
+  const accountValue = chartData[chartData.length-1].accountValue;
+  const milestones = {};
+  if (accountValue > 1_000_000) {
+    getMillionMilestones(chartData, milestones);
+  }
+
+  return milestones;
+};
+
+function getMillionMilestones(chartData, obj) {
+  let million = 1_000_000;
+  for (let yearData of chartData) {
+    if (yearData.accountValue > million) {
+      obj[million] = yearData;
+      million += million;
+    }
+  }
+  console.log(obj);
+}
 
 function getEmployerMatch(userData) {
   const employerMatch = userData.salary * (userData.employerMatchRate / 100);

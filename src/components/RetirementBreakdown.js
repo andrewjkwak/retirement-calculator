@@ -1,26 +1,23 @@
 import React from "react";
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from "recharts";
-import TextGroup from "./shared/TextGroup";
-
+import { UNDERSTANDING_GRAPH } from "../constant/TextConstant";
 import { BreakdownContainer } from "../styles/MainStyles";
 import { useChartDimensions } from "../hooks/useChartDimensions";
+import { usdFormat } from "../utils/getChartData";
+
+import TextGroup from "./shared/TextGroup";
 import BarChartGraph from "./shared/BarChartGraph";
-import { UNDERSTANDING_GRAPH } from "../constant/TextConstant";
+import AccountFacts from "./AccountFacts";
 
 const RetirementBreakdown = ({ chartData }) => {
 
   const tooltipFormatter = value => {
-    const usdFormat = new Intl.NumberFormat('en', {
-      style: 'currency',
-      currency: 'USD',
-      currencySign: 'accounting',
-    });
     return usdFormat.format(value);
-  }
+  };
 
   return (
     <BreakdownContainer>
-      <TextGroup text={ UNDERSTANDING_GRAPH } />
+      <h1>Retirement Breakdown 🎉</h1>
       <BarChartGraph chartData={ chartData }>
         <XAxis dataKey="year" />
         <YAxis />
@@ -32,6 +29,7 @@ const RetirementBreakdown = ({ chartData }) => {
         <Bar dataKey="expenseRatio" name="Expense Ratio" stackId="a" fill="pink" />
         <Bar dataKey="inflation" name="Inflation" stackId="a" fill="red" />
       </BarChartGraph>
+      <AccountFacts chartData={ chartData } />
     </BreakdownContainer>
   );
 };

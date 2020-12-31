@@ -16,9 +16,7 @@ const RetirementCalculator = () => {
         <Header />
       </HeaderContainer>
       <MainContainer>
-        <AsideContainer>
-          <InformationForm handleSubmit={ setUserData } />
-        </AsideContainer>
+        <InformationForm handleSubmit={ setUserData } pageWrapId={'page-wrap'} outerContainerId={'outer-container'} />
         <ContentContainer>
           {
             Object.keys(userData).length ?
