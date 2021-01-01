@@ -48,8 +48,5 @@ export const useChartDimensions = passedSettings => {
     width: dimensions.width || width,
     height: dimensions.height || height,
   });
-
-  console.log(newSettings);
-
   return [ref, newSettings];
 }

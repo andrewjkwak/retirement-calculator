@@ -9,7 +9,7 @@ import RetirementBreakdown from "./RetirementBreakdown";
 const RetirementCalculator = () => {
   const [userData, setUserData] = useState({});
   const chartData = useMemo(() => getChartData(userData), [userData]);
-  
+
   return (
     <AppContainer>
       <HeaderContainer>

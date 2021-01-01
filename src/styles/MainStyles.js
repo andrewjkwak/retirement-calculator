@@ -70,6 +70,10 @@ export const BreakdownContainer = styled.main`
   height: 100%;
   margin: 0 auto;
 
+  @media (max-width: 500px) {
+    width: 100%;
+  }
+
   h1 {
     text-align: center;
   }
@@ -78,6 +82,15 @@ export const BreakdownContainer = styled.main`
 export const FullChartContainer = styled.div`
   width: 100%;
   height: 500px;
+`;
+
+export const SecondaryChartContainer = styled.div`
+  width: 33%;
+  height: 100%;
+
+  @media (max-width: 600px) {
+    width: 100%;
+  }
 `;
 
 export const InfoContainer = styled.div`
@@ -92,8 +105,10 @@ export const InfoContainer = styled.div`
 
 export const CardContainer = styled.div`
   width: 33%;
-  height: 300px;
+  height: auto;
+  overflow: auto;
   margin: 0.2rem;
+  border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
 
   @media (max-width: 1700px) {
@@ -107,11 +122,21 @@ export const CardContainer = styled.div`
   }
 
   div {
-    margin: 0 2rem;
+    margin: 0 3rem;
     font-size: 1.3rem;
   }
 
   p {
     margin-bottom: 1rem;
+  }
+`;
+
+export const GraphContainer = styled.div`
+  display: flex;
+  height: 350px;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    width: 100%;
   }
 `;

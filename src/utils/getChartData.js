@@ -73,7 +73,27 @@ export const getMilestones = chartData => {
     getMillionMilestones(chartData, milestones);
   }
 
+  getCapitalGainsMilestone(chartData, milestones);
+
   return milestones;
+};
+
+export const getEarningsData = chartData => {
+  const finalYear = chartData[chartData.length-1];
+  const earningsData = [
+    { name: "Total Contribution", value: finalYear.totalContribution },
+    { name: "Capital Gains", value: finalYear.capitalGains },
+  ];
+  return earningsData;
+};
+
+export const getEmployerMatchData = chartData => {
+  const finalYear = chartData[chartData.length-1];
+  const matchData = [
+    { name: "Your contribution", value: finalYear.contribution },
+    { name: "Employer contribution", value: finalYear.totalContribution - finalYear.contribution },
+  ];
+  return matchData;
 };
 
 function getMillionMilestones(chartData, obj) {
@@ -84,7 +104,15 @@ function getMillionMilestones(chartData, obj) {
       million += million;
     }
   }
-  console.log(obj);
+}
+
+function getCapitalGainsMilestone(chartData, obj) {
+  for (let yearData of chartData) {
+    if (yearData.totalContribution < yearData.capitalGains) {
+      obj["capitalGains"] = yearData;
+      break;
+    }
+  }
 }
 
 function getEmployerMatch(userData) {

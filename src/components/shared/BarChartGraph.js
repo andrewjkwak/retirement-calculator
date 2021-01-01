@@ -5,7 +5,6 @@ import { FullChartContainer } from "../../styles/MainStyles";
 
 const BarChartGraph = ({ chartData, children }) => {
   const [ref, dimensions] = useChartDimensions();
-  console.log({ chartData, dimensions });
   return (
     <FullChartContainer ref={ ref }>
       <BarChart
